@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Portfolio</title>
+    <!--Google fonts link for poppins font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Blinker:wght@100;200;300;400;600;700;800;900&family=Cabin&family=Kumbh+Sans:wght@400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <!-- Enlace al CDN de Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background-color: #f0f0f0;
+        font-family: 'Poppins';
+      }
+
+      header{
+        margin-bottom: 8rem;
+      }
+
+      nav {
+        background-color: #ee964b;
+      }
+
+      .nav-link{
+        text-decoration: none;
+        transition: color 0.3s ease, text-decoration 0.3s ease;
+      }
+
+      .nav-link:hover{
+        text-decoration: underline;
+      }
+
+      .navbar-brand{
+        font-size: 2rem;
+        font-weight: bold;
+        color: white;
+      }
+
+      .btn-linkedin {
+        background-color: #0077b5;
+        color: white;
+      }
+
+      .btn-linkedin:hover {
+        background-color: #0d3b66;
+        color: white;
+      }
+
+      .btn-primary{
+        background-color: #0077b5;
+      }
+      .btn-primary:hover {
+        background-color: #0d3b66;
+        color: white;
+      }
+
+
+
+      .card-img-top{
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+      }
+
+
+      .card {
+        max-width: 90%;
+        margin-top: 5rem;
+      }
+
+      @media (min-width: 992px) {
+        .card {
+          max-width: 600px;
+        }
+      }
+
+        .card-body{
+        background-color: beige;
+      }
+
+      .full-screen {
+        height: 70vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      /* Card Styles */
+      .card {
+          position: relative;
+          overflow: hidden;
+          perspective: 1000px; /* Enable 3D */
+          transition: transform 0.5s ease;
+        }
+
+        /* Back of the images with description */
+        .card-overlay {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: rgba(0, 0, 0, 0.7); 
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          opacity: 0; 
+          transition: opacity 0.5s ease;
+
+          color: #fff;
+          font-size: 1.2rem;
+          text-align: center;
+        }
+
+        /* Show Overlay on Hover */
+        .card:hover .card-overlay {
+          opacity: 1;
+        }
+
+    </style>
+  </head>
+
+  <body>
+    <!--header with navigation-->
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">N S</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarCollapse"
+            aria-controls="navbarCollapse"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <!--Items justified evenly-->
+            <div class="navbar-nav w-100 justify-content-evenly">
+              <a href="#about-me" class="nav-item nav-link active" aria-current="page"
+                >About Me</a
+              >
+              <a href="#gallery" class="nav-item nav-link active" aria-current="page"
+                >Image Gallery</a
+              >
+              <a href="#contact-me" class="nav-item nav-link active" aria-current="page"
+                >Contact Me</a
+              >
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+
+    <section id="about-me">
+    <div class="full-screen">
+
+      <div class="about-me-container mx-auto mt-5 position-relative" style="max-width: 500px;">
+        <!--About Me title-->
+        <h2 class="about-me-title text-center">About Me</h2>
+
+      <!--"About Me" Card-->
+      <div class="card about-me-card mx-auto mt-5" style="max-width: 500px;">
+        <div class="d-flex justify-content-center">
+        <img
+          src="avatar.png"
+          class="card-img-top"
+          alt="Avatar of Natalia"
+          style="width: 250px; height: auto;"
+        />
+        </div>
+        <div class="card-body text-center">
+          <h5 class="card-title">Natalia</h5>
+          <p class="card-text">
+            Junior Software Engineering student at Universidad Galileo, eager to learn and contribute.
+          </p>
+          <a
+            href="https://www.linkedin.com/in/natalia-sosa-322864286/"
+            target="blank"
+            rel="noopener noreferrer"
+            class="btn btn-linkedin"
+            >LinkedIn</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+  </section>
+
+
+    <!--Gallery with 6 images-->
+  <section id="gallery">
+    <section class="py-5">
+      <div class="container">
+        <h2 class="text-center mb-3">Some projects from college</h2>
+        <div class="row row-cols-1 row-cols-md-3 g-2">
+          <div class="col">
+            <div class="card">
+              <div class="card-overlay">
+                <p>Resistance decade box project for an electricity course.</p>
+              </div>
+              <img src="resistance.png" class="card-img-top" alt="Resistance decade box">
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <div class="card-overlay">
+                <p>Compiler project for the COOL programming language for a course on compilers.</p>
+              </div>
+              <img src="compi-project.png" class="card-img-top" alt="Grammar of the COOL programming language.">
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <div class="card-overlay">
+                <p>RISC-V Based CPU on Logisim for a machine structure course.</p>
+              </div>
+              <img src="processor.png" class="card-img-top" alt="Design of a RISC-V Based CPU on Logisim.">
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <div class="card-overlay">
+                <p>Voltage converter for an electronics course.</p>
+              </div>
+              <img src="voltage.png" class="card-img-top" alt="Voltage converter">
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <div class="card-overlay">
+                <p>Physics project about industrial security.</p>
+              </div>
+              <img src="physics.png" class="card-img-top" alt="physics project">
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <div class="card-overlay">
+                <p>Lamp modelled with vector functions.</p>
+              </div>
+              <img src="lamp.png" class="card-img-top" alt="Lamp model 3d">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+      </div>
+
+
+    <!--Contact form-->
+    <section id="contact-me">
+    <div class="container my-5">
+      <form class="p-1 border rounded form-outline">
+        <h2 class="mb-4 pt-3 text-center">Contact Me</h2>
+
+        <!-- Name Input -->
+        <div class="mb-3">
+          <label class="form-label" for="inputName">Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="inputName"
+            placeholder="Your Name"
+          />
+        </div>
+
+        <!-- Email Input -->
+        <div class="mb-3">
+          <label class="form-label" for="inputEmail">Email</label>
+          <input
+            type="email"
+            class="form-control"
+            id="inputEmail"
+            placeholder="Your Email"
+          />
+        </div>
+
+        <!-- Message-->
+        <div class="mb-3">
+          <label class="form-label" for="inputMessage">Message</label>
+          <textarea
+            class="form-control"
+            id="inputMessage"
+            rows="3"
+            placeholder="Your Message"
+          ></textarea>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="d-grid">
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </div>
+      </form>
+    </div>
+    </section>
+
+    <!--Footer-->
+    <footer class="bg-dark text-center text-white py-3">
+      <p class="mb-1">&copy; 2025 Natalia Sosa. All rights reserved.</p>
+    </footer>
+    <!-- Bootstrap script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
